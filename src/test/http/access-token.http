@@ -1,0 +1,14 @@
+# get access token
+POST http://localhost:8081/oauth/token
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic Y2xpZW50MTpwYXNzd29yZA== // bas64 encoding: btoa('client-id:client-secret')
+
+code=ob5iUd&grant_type=authorization_code&redirect_uri=https%3A%2F%2Fwww.naver.com%2F&scope=read
+
+###
+
+# get refresh token
+GET http://localhost:8081/api/session
+Authorization: Bearer cb7b2d10-a275-407d-9aee-55d5632a0ac1
+
+###
